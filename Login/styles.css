@@ -1,0 +1,118 @@
+@keyframes glowingbn5 {
+    0% {
+        background-position: 0, 0;
+    }
+    50% {
+        background-position: 400%, 0;
+    }
+    100% {
+        background-position: 0, 0;
+    }
+}
+
+.bn5:active {
+    color: black;
+}
+
+.bn5:active::after {
+    background: transparent;
+}
+
+.container:hover::before,
+.bn5.container:hover::before {
+    opacity: 1;
+}
+
+.box label,
+.container::before,
+.bn5::before {
+    content: "";
+    background: linear-gradient(45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #74c156);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% - 4px);
+    animation: glowingbn5 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+/* Estilos para la imagen de fondo */
+body {
+    background-image: url('montes.jpg'); /* Ruta de la imagen */
+    background-size: width 300px; /* La imagen cubre toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-attachment: 900px; /* Fija la imagen al fondo (no se mueve cuando haces scroll) */
+    margin: 30px;
+    padding: 30px;
+    font-family: Arial, sans-serif; /* Esto es solo para que se vea más bonito */
+}
+
+/* Estilos para el contenedor */
+.container {
+    background-color: rgba(228, 209, 104, 0.8); /* Fondo blanco con opacidad */
+    border-radius: 10px;
+    padding: 30px;
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(74, 65, 23, 0.2);
+}
+
+/* Estilos para la imagen dentro del contenedor */
+.image-container {
+    text-align: center;
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+}
+
+.logo {
+    max-width: 50%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* Estilos generales del formulario */
+.box {
+    margin-bottom: 10px;
+}
+
+.box input {
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.bn5 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #74c156;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.bn5:hover {
+    background-color: #4c8d3b; /* Cambia el color de fondo al pasar el mouse */
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+a {
+    color: #4c8d3b; /* Color del enlace */
+}
